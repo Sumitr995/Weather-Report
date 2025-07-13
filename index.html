@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+      body {
+        background: #e0e0e0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .container {
+        width: 50vh;
+        height: 50vh;
+        border-radius: 20px;
+        background: #e0e0e0;
+        box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff,
+          inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .h1 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: #686767;
+      }
+
+      .box {
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="h1">Weather Report API Testing</div>
+
+    <!-- ✅ Add city input -->
+    <input
+      type="text"
+      id="cityInput"
+      placeholder="Enter city name"
+      style="padding: 10px; border-radius: 8px; border: none; margin-bottom: 20px;"
+    />
+
+    <!-- ✅ Add button to trigger function -->
+    <button
+      onclick="getWeather()"
+      style="padding: 10px 20px; border: none; border-radius: 8px; background-color: #4caf50; color: white; font-family: 'Poppins'; cursor: pointer; margin-bottom: 20px;"
+    >
+      Get Weather
+    </button>
+
+    <div class="container">
+      <div class="box"></div>
+    </div>
+
+    <script src="API.js"></script>
+  </body>
+</html>
